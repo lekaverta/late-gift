@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Ta atrasado!!!!</title>
+        <style>
+            b {
+                text-align: center;
+                display: block;
+                margin-top: 15px;
+            }
+            @keyframes fa-blink {
+                0% { opacity: 1; }
+                50% { opacity: 0.5; }
+                100% { opacity: 0; }
+            }
+            .fa-blink {
+                display: block;
+                text-align: center;
+                margin: 15px 0px;
+                -webkit-animation: fa-blink .75s linear infinite;
+                -moz-animation: fa-blink .75s linear infinite;
+                -ms-animation: fa-blink .75s linear infinite;
+                -o-animation: fa-blink .75s linear infinite;
+                animation: fa-blink .75s linear infinite;
+            }
+            .opened {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <marquee>Atrasou mas a culpa é do Mercado Envios!</marquee>
+        <b>curl -X GET \<br/>
+            'http://api.internal.ml.com/shipments/40270244913?caller.scopes=admin' \<br/>
+            -H 'X-Format-New: true'</b>
+
+        <div id="closed">
+            <blink class="fa-blink">Clique no presente para abrir!!!</blink>
+            <img id="gift" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1C40/production/_110223270_156d5f09-86ab-4b60-95bd-15ae457a01e8.jpg" alt="Presente" />
+        </div>
+        <div id="opened" class="opened">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_778738-MLB43988341115_112020-O.webp" alt="Cerveja Titobier Thoreau Apa 300ml">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_794240-MLB44227084273_122020-O.webp" alt="Cerveja Titobier Goethe Kölsch 300ml">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_873462-MLB43558418515_092020-O.webp" alt="Biscoito Bono Recheado Coberto Chocolate 109g">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_859286-MLB43558649164_092020-O.webp" alt="Bisc Choc Rech Baun Cob Choc Ao Leite Nestlé Negresco 120g">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_909620-MLB43895774652_102020-O.webp" alt="Sabonete Dove Original 90g">
+        </div>
+
+        <script>
+            var nintendo64 = function () {
+                document.getElementById("opened").style.display = 'block';
+                document.getElementById("closed").style.display = 'none';
+            };
+
+            document.getElementById("gift").addEventListener('click', function (event) {
+                nintendo64();
+            }, false);
+        </script>
+    </body>
+</html>
